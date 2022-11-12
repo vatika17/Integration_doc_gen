@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    body, html {
+        height: 100%;
+      }
+      
+      * {
+        box-sizing: border-box;
+      }
+      .inp{
+        height: 100%;
+        background-color: powderblue;
+      }
+      .bg-image {
+      
+        background-image: url("System-integration.jpg");
+      
+        filter: blur(3px);
+        -webkit-filter: blur(3px);
+      
+    
+        height: 100%;
+      
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      
+
+      .bg-text {
+        background-color: rgb(0,0,0); 
+        background-color: rgba(0,0,0, 0.4); 
+        color: white;
+        font-weight: bold;
+        border: 3px solid #f1f1f1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        width: 100%;
+        padding: 90px;
+        text-align: center;
+      }
+      .inp{
+        text-align: center;
+        padding: 500px;
+        font-style:italic;
+        font-size: 50px;
+      }
+      .outp{
+        text-align: center;
+        padding: 500px;
+        font-style:italic;
+        font-size: 50px;
+        height: 100%;
+        background-color: skyblue;
+      }
+      #uni2{
+        font-size: 40px;
+      }
+      #uni1{
+        color:black;
+        font-size: 20px;
+      }
+      </style>
+</head>
+<body>
+    <div class="bg-image"></div>
+
+<div class="bg-text">
+  <h1 id="uni2">Integration Architecture Document Generator</h1>
+  <p id="uni1">Get to know everything about integration architecture of your system</p>
+</div>
+
+
+
+<div class="inp">
+    <form action="/action_page.php" 
+        enctype="multipart/form-data">
+          
+        <label for="myfile">Select a file</label>
+        <input type="file" id="file-uploader" name="myfile" />
+        <br /><br />
+    </form>
+    
+</div>
+
+
+
+
+<div class="outp">
+    <button onclick="generate()">Generate Document</button>
+     <p id="demo"></p>
+     <script>
+        function generate() {
+            var para = document.getElementsByTagName("a");
+            let i, len, text;
+            for (i = 0, len = para.length, text = ""; i < len; i++) {
+                 text += para[i] + "<br>";
+            }
+             document.getElementById("demo").innerHTML = text;
+        }
+     </script>
+    </div>
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
